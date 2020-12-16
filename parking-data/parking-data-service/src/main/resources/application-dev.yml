@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      pool-name: postgre
+      connection-test-query: select 1
+      connection-timeout: 5000
+    url: jdbc:p6spy:postgresql://localhost:5432/postgres?connect_timeout=5
+    username: postgres
+    password: demo
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
