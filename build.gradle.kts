@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 repositories {
   mavenCentral()
+  maven(url = "'https://plugins.gradle.org/m2/'")
 }
 
 buildscript {
@@ -23,6 +24,10 @@ allprojects {
   ext {
     set("mapstructVersion", "1.4.1.Final")
     set("mapstructKotlinVersion", "1.4.0.0")
+    set("kotlinVersion", "1.3.72")
+    set("kotlinxMetadataVersion", "0.2.0")
+    set("autoServiceVersion", "1.0-rc7")
+    set("javaPoetVersion", "1.13.0")
   }
 }
 
@@ -34,6 +39,7 @@ subprojects {
   repositories {
     mavenCentral()
     jcenter()
+    maven(url = "'https://plugins.gradle.org/m2/'")
   }
 
   group = "com.jet"

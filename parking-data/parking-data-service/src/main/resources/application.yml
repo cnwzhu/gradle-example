@@ -2,6 +2,10 @@ server:
   port: 8080
 
 spring:
+  banner:
+    image:
+      pixelmode: block
+      width: 256
   profiles:
     active: dev
   datasource:
@@ -9,3 +13,4 @@ spring:
 mybatis-plus:
   global-config:
     banner: off
+
